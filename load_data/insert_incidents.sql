@@ -1,0 +1,4 @@
+INSERT INTO incidents (incident_type, incident_date, incident_severity, collision_type, incident_state, incident_city, incident_location, incident_hour_of_the_day, authorities_contacted, number_of_vehicles_involved, property_damage, bodily_injuries, police_report_available, witnesses, policy_number)
+SELECT incident_type, incident_date, incident_severity, collision_type, incident_state, incident_city, incident_location, incident_hour_of_the_day, authorities_contacted, number_of_vehicles_involved, property_damage, bodily_injuries, police_report_available, witnesses, policy_number
+FROM raw_claims
+WHERE policy_number IS NOT NULL AND policy_number != '';
